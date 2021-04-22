@@ -1,0 +1,16 @@
+.list-container{
+    margin-top: 20px;
+    width: 40%;
+}
+
+.title-list{
+    background-color: rgb(51, 124, 233);
+    margin-top: 60px;
+}
+.list-row{
+    background-color:rgb(51, 124, 233);
+    margin-top: 20px;
+}
+.espaco{
+    margin-bottom: 20px;
+}

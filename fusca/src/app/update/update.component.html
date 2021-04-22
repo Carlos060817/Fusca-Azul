@@ -1,0 +1,38 @@
+<div  class="list-container">
+    <div class="list-content">
+        <div class="title-list">
+            <h3>Auto peças Fusca Azul | Controle de Estoque</h3>
+        </div>
+        <div class="list-row">
+            <h3>Update</h3>
+
+
+            <p *ngFor="let produto of produtos; let i = index">
+                ({{produto.codigo}})
+                {{produto.descricao}}
+            </p>
+            <p *ngFor="let produto of produtos; let i = index">
+                Quantidade disponível:{{produto.qtde_disponivel}}
+            </p>
+            <p *ngFor="let produto of produtos; let i = index" >
+                Capacidade máxima:{{produto.c_max}}
+            </p>
+            <p *ngFor="let produto of produtos; let i = index">
+               Quantidade mínima necessária:{{produto.qtde_min}}
+            </p>
+            <form #f="ngForm" (ngSubmit)="onSubmit" class="text-center">
+
+                <div class="form-group">
+                    <label>Insira uma quantidade para alterar estoque</label>
+                    <input type="number" class="form-contro col-md-8" name="qtde" id="qtde" value="" [(ngModel)]="quantidade" required>
+                </div>
+                <div class="form-group">
+                    <button class="espaco  btn-info col-md-4" (click)="adicionar()">(+) Adicionar</button>
+                    <button class="espaco  btn-warning col-md-4" (click)="remover()">(-) Remover</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</div>

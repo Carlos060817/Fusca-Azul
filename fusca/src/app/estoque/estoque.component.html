@@ -1,0 +1,17 @@
+<div  class="list-container">
+    <div class="list-content">
+        <div class="title-list">
+            <h3>Auto peças Fusca Azul | Controle de Estoque</h3>
+        </div>
+        <div class="list-row">
+            <h3>Produtos</h3>
+            <a  *ngFor="let produto of produtos; let i = index" [ngClass]="{'cor': produto.type_alert == '', 'cor-abaixo-min': produto.type_alert == 'abaixo_min', 'cor-30-c_max': produto.type_alert == 'abaixo_capacidade_max'}"  routerLink="/update-produto/{{i}}">
+                ({{produto.codigo}})
+                {{produto.descricao}}
+                {{produto.qtde_disponivel}}/{{produto.c_max}}
+                (min. {{produto.qtde_min}})<br>
+            </a>
+        </div>
+    </div>
+
+</div>
